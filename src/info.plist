@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.mcavallo.notes</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>B13F28C4-C199-4986-9A8C-03F70994B938</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6CD5AC0E-98B9-4F98-B73D-58064E7C30D5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Mariano Cavallo</string>
+	<key>description</key>
+	<string></string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Notes</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict/>
+			<key>type</key>
+			<string>alfred.workflow.action.openfile</string>
+			<key>uid</key>
+			<string>6CD5AC0E-98B9-4F98-B73D-58064E7C30D5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>110</integer>
+				<key>keyword</key>
+				<string>notes</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string>Loading...</string>
+				<key>script</key>
+				<string>export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+ruby ./main.rb $(./normalise -form NFC {query})
+</string>
+				<key>subtext</key>
+				<string>Search personal notes</string>
+				<key>title</key>
+				<string>My Notes</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>B13F28C4-C199-4986-9A8C-03F70994B938</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>6CD5AC0E-98B9-4F98-B73D-58064E7C30D5</key>
+		<dict>
+			<key>ypos</key>
+			<real>20</real>
+		</dict>
+		<key>B13F28C4-C199-4986-9A8C-03F70994B938</key>
+		<dict>
+			<key>ypos</key>
+			<real>20</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
